@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Themes.Maui.Pages.SettingsPage"
+             xmlns:vm="clr-namespace:Themes.Maui.ViewModels"
+             x:DataType="vm:SettingsViewModel"
+             Title="Settings">
+
+    <VerticalStackLayout Padding="16"
+                         Spacing="20">
+        <Label Text="Appearance"
+               FontAttributes="Bold"
+               FontSize="20" />
+
+        <Grid ColumnDefinitions="*,Auto"
+              RowDefinitions="Auto">
+            <Label Text="Dark Mode"
+                   VerticalOptions="Center" />
+            <Switch Grid.Column="1"
+                    IsToggled="{Binding IsDarkMode, Mode=TwoWay}" />
+        </Grid>
+
+        <Label Text="{Binding ThemeStatus}" />
+        <Label FontSize="12"
+               Text="Theme preference is saved and will be applied the next time the app starts." />
+    </VerticalStackLayout>
+
+</ContentPage>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Themes.Maui.Pages.HomePage"
+             xmlns:vm="clr-namespace:Themes.Maui.ViewModels"
+             x:DataType="vm:HomeViewModel"
+             Title="Home">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="16"
+                             Spacing="16">
+            <Label Text="Welcome 👋"
+                   FontSize="28"
+                   FontAttributes="Bold" />
+            <Label Text="This is your MVVM-ified .NET MAUI app with flyout, demo controls, and runtime theme switching." />
+            <Button Text="Go to Controls Demo"
+                    Command="{Binding NavigateToControlsCommand}" />
+            <Button Text="Go to Settings"
+                    Command="{Binding NavigateToSettingsCommand}" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
